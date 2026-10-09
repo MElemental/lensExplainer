@@ -731,8 +731,8 @@ function update(){
   $('dual').disabled=!cin;
   document.querySelectorAll('#classSeg button').forEach(x=>x.classList.toggle('on',x.dataset.c===S.camClass));
   $('isoHint').textContent=cin
-    ?'Adds no light. On a cinema camera, ISO mostly shifts the range: middle grey moves up the scale, so higher ISO means a brighter picture, less highlight headroom and more shadow range, with the total staying about the same (a little shrinkage at the extremes). Noise comes from too little light on the sensor. Dual-native sensors have a second base ISO with lower read noise.'
-    :'Adds no light. On a consumer camera, higher ISO mostly shrinks the range: highlights clip sooner and the total dynamic range falls. Noise comes from too little light on the sensor, which people often raise ISO to compensate for.';
+    ?'Adds no light. On a cinema camera, ISO mostly shifts the dynamic range: A higher ISO shifts middle grey moves down the scale, so higher ISO means a brighter picture, more highlight headroom and less shadow range, with the total dynamic staying about the same (Some compression at the extremes). Noise comes from too little light on the sensor. Dual-native sensors have a second base ISO with lower read noise.'
+    :'Adds no light. On a consumer camera, higher ISO mostly compresses the dynamic range: highlights clip sooner and the total dynamic range falls. Noise comes from too little light on the sensor, which people and automatic/semi-automatic modes often raise ISO to compensate for.';
 
   // readouts
   $('fVal').textContent='f/'+Nn;$('fSlider').value=S.fi;
